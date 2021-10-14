@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/codingsince1985/geo-golang"
-	"github.com/codingsince1985/geo-golang/osm"
+	"github.com/musab-mk/geo-golang"
+	"github.com/musab-mk/geo-golang/osm"
 )
 
 type (
