@@ -13,7 +13,7 @@ import (
 )
 
 // DefaultTimeout for the request execution
-const DefaultTimeout = time.Second * 8
+var DefaultTimeout = time.Second * 8
 
 // ErrTimeout occurs when no response returned within timeoutInSeconds
 var ErrTimeout = errors.New("TIMEOUT")
