@@ -15,6 +15,8 @@ import (
 // DefaultTimeout for the request execution
 var DefaultTimeout = time.Second * 8
 
+var Client = http.DefaultClient
+
 // ErrTimeout occurs when no response returned within timeoutInSeconds
 var ErrTimeout = errors.New("TIMEOUT")
 
@@ -119,7 +121,7 @@ func response(ctx context.Context, url string, obj ResponseParser) error {
 	}
 	req = req.WithContext(ctx)
 
-	resp, err := http.DefaultClient.Do(req)
+	resp, err := Client.Do(req)
 	if err != nil {
 		return err
 	}
